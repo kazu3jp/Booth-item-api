@@ -1,3 +1,4 @@
+import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 
@@ -31,4 +32,4 @@ app.get('/item', async (c) => {
   }
 })
 
-export default app
+serve(app)
