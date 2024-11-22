@@ -28,7 +28,7 @@ app.get('/item', async (c) => {
     return c.json(data)
   } catch (error) {
     console.error('エラー:', error)
-    return c.json({ error: 'アイテムデータの取得中にエラーが発生しました' }, 500)
+    return c.json({ error: 'アイテムデータが取得できませんでした。アイテムが存在しない可能性があります。' }, 408)
   }
 })
 
